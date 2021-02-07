@@ -2,7 +2,18 @@
 - hosts: webservers
   become: True
   tasks:
-       name: Install apache server
-       apt:
-          name: "httpd"
+       - name: Install apache server
+         apt:
+            name: "httpd"
+            state: "present"
+       - name: Start Apache Server
+         service:
+                 name: httpd
+                 state: started
+                 enabled: True
+       - name: Deploy static website
+         copy: 
+             src: index.html
+             dest: /var/www/html
+
 
