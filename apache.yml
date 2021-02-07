@@ -4,11 +4,11 @@
   tasks:
        - name: Install apache server
          apt:
-            name: apache
+            name: apache2
             state: present
        - name: Start Apache Server
          service:
-                 name: apache
+                 name: apache2
                  state: started
                  enabled: True
        - name: Deploy static website
