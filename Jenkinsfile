@@ -5,8 +5,8 @@ pipeline{
         registry = 'tpouche94/static-web'
     }
     stages{
-        stage{
-            steps("Build Docker image"){
+        stage("Build Docker image"){
+            steps{
                 dockerImage = docker.Build registry
             }
         }
