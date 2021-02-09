@@ -1,5 +1,5 @@
 pipeline{
-    agent any{
+    agent any
         environment{
             dockerImage =''
             registry = 'tpouche94/static-web'
@@ -11,5 +11,4 @@ pipeline{
                 }
             }
         }
-    }
 }
