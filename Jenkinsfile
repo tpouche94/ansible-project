@@ -1,13 +1,13 @@
 pipeline{
     agent any
     environment{
-        dockerImage=''
+        docker_image=''
         registry='tpouche94/static-web'
     stages{
         stage("Build Docker image"){
             steps{
                 script{
-                    dockerImage= docker.Build registry
+                    docker_image= docker.build registry
                 }
             }
         }
