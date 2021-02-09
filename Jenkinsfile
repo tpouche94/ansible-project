@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Build Docker image"){
             steps{
-                dockerImage = docker.Build registry
+                dockerImage = docker.build registry
             }
         }
     }
