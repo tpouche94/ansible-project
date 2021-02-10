@@ -1,10 +1,12 @@
-FROM nginx:latest
+FROM httpd
 
 
-WORKDIR /usr/share/nginx/html
+
 
 # Add all local static files to image working directory
-ADD /home/ubuntu/new_project ./
+
+
+COPY ./web-file/index.html /var/www/
 
 # If there was a lot of ADD COPY and RUN Steps,  Bash script file is common practice
 # To bootstrap the image without additional layers
