@@ -1,7 +1,9 @@
-FROM nginx
-
-COPY ./web-file/my-text.html /usr/share/nginx/html
+FROM httpd
+  
+COPY ./files/index.html /var/www
 
 EXPOSE 80
+
+RUN docker
 
 
