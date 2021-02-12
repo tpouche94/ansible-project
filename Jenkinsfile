@@ -13,15 +13,5 @@ pipeline{
             }
         }
         
-            stage("Create container for the image"){
-
-                steps{
-                      sh
-                      docker run -it --name my-app -d -p 34:80 dockerImage
-              }
-
-     
-
-    }
 }
 }
