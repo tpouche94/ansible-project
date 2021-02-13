@@ -17,9 +17,11 @@ pipeline{
             steps{
 	        script{
 
-                     docker.withRegistry('', dockerCredentials)
+                     docker.withRegistry('', dockerCredentials){
 	             dockerImage.push()
+		    }
                  }
+
 
             }
         
