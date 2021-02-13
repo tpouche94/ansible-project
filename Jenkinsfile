@@ -16,7 +16,9 @@ pipeline{
 	stage("Push image to dockerhub"){
             steps{
                 docker.withRegistry('https://hub.docker.com', credentials)
+
             }
         
+}
 }
 }
