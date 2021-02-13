@@ -3,6 +3,7 @@ pipeline{
     environment{
         dockerImage=''
         registry='tpouche94/my-app'
+	credentials='dockerhub'
     }
     stages{
         stage("Build Docker image"){
@@ -12,6 +13,10 @@ pipeline{
                 }
             }
         }
+	stage("Push image to dockerhub"){
+            steps{
+                docker.withRegistry('https://hub.docker.com', credentials)
+            }
         
 }
 }
